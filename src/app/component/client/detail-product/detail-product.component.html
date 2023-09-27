@@ -1,0 +1,34 @@
+<div class="w-[80%] m-auto ml-[100px]">
+    <h2 class="text-xl font-bold text-gray-900 sm:text-3xl my-[20px]">Product details</h2>
+
+    <div class="flow-root rounded-lg border border-gray-100 py-3 shadow-sm  " *ngIf="product">
+        <dl class="-my-3 divide-y divide-gray-100 text-sm">
+            <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+                <dt class="font-medium text-gray-900">Name</dt>
+                <dd class="text-gray-700 sm:col-span-2"> {{product.name}} </dd>
+            </div>
+
+            <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+                <dt class="font-medium text-gray-900">Code</dt>
+                <dd class="text-gray-700 sm:col-span-2"> {{product.code}} </dd>
+            </div>
+            <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+                <dt class="font-medium text-gray-900">Price</dt>
+                <dd class="text-gray-700 sm:col-span-2"> {{product.price}} </dd>
+            </div>
+
+            <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+                <dt class="font-medium text-gray-900">Date</dt>
+                <dd class="text-gray-700 sm:col-span-2">{{product.releaseDate | date:"dd-MM-yyyy"}}</dd>
+            </div>
+
+            <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+                <dt class="font-medium text-gray-900">Image</dt>
+                <dd class="text-gray-700 sm:col-span-2"><img src="{{product.imageUrl}}" alt="" width="300px"
+                        height="300px"></dd>
+            </div>
+
+
+        </dl>
+    </div>
+</div>

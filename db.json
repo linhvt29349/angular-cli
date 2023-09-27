@@ -1,0 +1,260 @@
+{
+  "products": [
+    {
+      "name": "Sleek Metal Computer",
+      "code": "KMF",
+      "releaseDate": "2099-02-21T16:28:43.171Z",
+      "price": "441.00",
+      "imageUrl": "https://loremflickr.com/650/480",
+      "id": "12"
+    },
+    {
+      "name": "Refined Bronze Mouse",
+      "code": "LSL",
+      "releaseDate": "2044-07-30T01:58:28.225Z",
+      "price": "854.00",
+      "imageUrl": "https://loremflickr.com/610/480",
+      "id": "13"
+    },
+    {
+      "name": "Small Concrete Towels",
+      "code": "MOP",
+      "releaseDate": "2043-09-04T09:23:13.169Z",
+      "price": "780.00",
+      "imageUrl": "https://loremflickr.com/640/470",
+      "id": "14"
+    },
+    {
+      "name": "Luxurious Wooden Hat",
+      "code": "FJD",
+      "releaseDate": "2081-05-11T12:15:19.438Z",
+      "price": "505.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "15"
+    },
+    {
+      "name": "Practical Granite Shoes",
+      "code": "PLN",
+      "releaseDate": "2089-09-29T01:50:39.998Z",
+      "price": "332.00",
+      "imageUrl": "https://loremflickr.com/640/481",
+      "id": "16"
+    },
+    {
+      "name": "Recycled Concrete Bacon",
+      "code": "KES",
+      "releaseDate": "2013-02-17T05:58:02.125Z",
+      "price": "478.00",
+      "imageUrl": "https://loremflickr.com/640/482",
+      "id": "17"
+    },
+    {
+      "name": "Tasty Fresh Mouse",
+      "code": "CZK",
+      "releaseDate": "2056-04-30T19:02:53.102Z",
+      "price": "580.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "18"
+    },
+    {
+      "name": "Practical Wooden Salad",
+      "code": "MWK",
+      "releaseDate": "2078-02-18T06:41:25.694Z",
+      "price": "288.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "19"
+    },
+    {
+      "name": "Refined Metal Shoes",
+      "code": "BIF",
+      "releaseDate": "2035-08-24T22:14:56.121Z",
+      "price": "70.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "20"
+    },
+    {
+      "name": "Elegant Fresh Keyboard",
+      "code": "TWD",
+      "releaseDate": "2005-12-14T04:47:17.138Z",
+      "price": "279.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "21"
+    },
+    {
+      "name": "Awesome Wooden Cheese",
+      "code": "CZK",
+      "releaseDate": "2017-02-16T14:05:37.015Z",
+      "price": "995.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "22"
+    },
+    {
+      "name": "Oriental Cotton Shoes",
+      "code": "EEK",
+      "releaseDate": "1995-06-26T19:31:00.505Z",
+      "price": "588.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "23"
+    },
+    {
+      "name": "Fantastic Concrete Tuna",
+      "code": "XAF",
+      "releaseDate": "2023-06-05T12:32:29.671Z",
+      "price": "631.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "24"
+    },
+    {
+      "name": "Practical Frozen Chair",
+      "code": "NIO",
+      "releaseDate": "2039-07-25T21:27:46.323Z",
+      "price": "943.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "25"
+    },
+    {
+      "name": "Bespoke Soft Hat",
+      "code": "SZL",
+      "releaseDate": "2092-07-10T10:55:09.189Z",
+      "price": "273.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "26"
+    },
+    {
+      "name": "Licensed Fresh Pants",
+      "code": "MZN",
+      "releaseDate": "2062-08-31T13:45:52.256Z",
+      "price": "845.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "27"
+    },
+    {
+      "name": "Practical Bronze Tuna",
+      "code": "SBD",
+      "releaseDate": "1991-08-24T02:32:31.593Z",
+      "price": "644.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "28"
+    },
+    {
+      "name": "Gorgeous Cotton Towels",
+      "code": "BHD",
+      "releaseDate": "2022-09-28T10:19:14.894Z",
+      "price": "622.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "29"
+    },
+    {
+      "name": "Ergonomic Wooden Tuna",
+      "code": "KYD",
+      "releaseDate": "2085-07-25T22:09:03.122Z",
+      "price": "950.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "30"
+    },
+    {
+      "name": "Small Bronze Pants",
+      "code": "BWP",
+      "releaseDate": "1999-11-28T22:30:26.806Z",
+      "price": "447.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "47"
+    },
+    {
+      "name": "Incredible Bronze Mouse",
+      "code": "MUR",
+      "releaseDate": "2082-06-18T22:23:44.972Z",
+      "price": "657.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "48"
+    },
+    {
+      "name": "Ergonomic Soft Pants",
+      "code": "XAU",
+      "releaseDate": "2040-01-08T18:14:34.633Z",
+      "price": "680.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "49"
+    },
+    {
+      "name": "Generic Metal Towels",
+      "code": "CDF",
+      "releaseDate": "2072-12-12T10:44:19.024Z",
+      "price": "541.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "50"
+    },
+    {
+      "name": "Awesome Bronze Pizza",
+      "code": "AWG",
+      "releaseDate": "2096-04-07T14:21:14.207Z",
+      "price": "591.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "51"
+    },
+    {
+      "name": "Generic Bronze Table",
+      "code": "DZD",
+      "releaseDate": "2015-03-02T07:43:11.430Z",
+      "price": "337.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "52"
+    },
+    {
+      "name": "Small Bronze Pizza",
+      "code": "KPW",
+      "releaseDate": "2090-04-15T22:34:59.082Z",
+      "price": "81.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "53"
+    },
+    {
+      "name": "Recycled Wooden Fish",
+      "code": "XAG",
+      "releaseDate": "2088-08-12T03:38:27.253Z",
+      "price": "293.00",
+      "imageUrl": "https://loremflickr.com/640/480",
+      "id": "54"
+    },
+    {
+      "id": 1695735837168,
+      "name": "product new",
+      "price": 7,
+      "imageUrl": "https://picsum.photos/200/300",
+      "code": "ABS",
+      "releaseDate": "2023-09-26"
+    },
+    {
+      "name": "Truyện tranh",
+      "price": 200,
+      "code": "CD",
+      "releaseDate": "2023-09-26",
+      "imageUrl": "https://picsum.photos/200/310",
+      "id": 1695735837169
+    },
+    {
+      "name": "Tiểu thuyết",
+      "price": 1204,
+      "code": "TT",
+      "releaseDate": "2023-09-27",
+      "imageUrl": "https://picsum.photos/200/304",
+      "id": 1695735837170
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "role": 1
+    },
+    {
+      "id": 2,
+      "name": "Linh",
+      "email": "linh@gmail.com",
+      "password": "123456",
+      "role": 2
+    }
+  ]
+}

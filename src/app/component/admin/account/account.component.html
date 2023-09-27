@@ -1,0 +1,55 @@
+<div class="px-4">
+    <div class="flex my-[35px]">
+        <h2 class="text-[30px] text-red-300 font-medium">Danh sách tài khoản!</h2>
+
+    </div>
+
+    <div class="overflow-x-auto">
+        <router-outlet />
+        <a routerLink="add"><button
+                class="inline-block rounded bg-blue-400 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">Add
+                account</button></a>
+
+        <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm text-center">
+            <thead class="ltr:text-left rtl:text-right">
+                <tr>
+                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
+                        Stt
+                    </th>
+                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 w-[200px] uppercase">
+                        Tên
+                    </th>
+                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
+                        Email
+                    </th>
+
+                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
+                        Thao tác
+                    </th>
+
+                </tr>
+            </thead>
+
+            <tbody class="divide-y divide-gray-200">
+                <tr *ngFor="let user of users;index as i">
+                    <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                        {{i+1}}
+                    </td>
+                    <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{user.name}}</td>
+                    <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{user.email}}</td>
+
+                    <td class="whitespace-nowrap px-4 py-2 ">
+                        <a routerLink="update/{{user.id}}"><button
+                                class="inline-block mr-[5px] rounded bg-blue-400 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">Update</button></a>
+                        <button
+                            class="inline-block rounded bg-red-500 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+                            (click)="RemoveUser(user.id)">Xóa</button>
+
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>

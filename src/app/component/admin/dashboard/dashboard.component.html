@@ -1,0 +1,79 @@
+<div class="px-4">
+    <div class="flex my-[35px]">
+        <h2 class="text-[30px] text-red-300 font-medium">Danh sách sản phẩm!</h2>
+        <div class="ml-[420px]">
+            <label class=" font-medium text-gray-700">
+                Tìm kiếm theo tên
+            </label>
+
+            <input type="text" [(ngModel)]="SearchText" placeholder="search name..."
+                class="mt-2 w-[300px] border-2 rounded-md border-gray-500 shadow-sm sm:text-sm py-[10px] px-[10px]" />
+        </div>
+    </div>
+
+    <div class="overflow-x-auto">
+
+        <a routerLink="products/add">
+            <button
+                class="inline-block rounded bg-blue-400 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">Add
+                product</button>
+        </a>
+        <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm text-center">
+            <thead class="ltr:text-left rtl:text-right">
+                <tr>
+                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
+                        Stt
+                    </th>
+                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 w-[200px] uppercase">
+                        Ảnh
+                    </th>
+                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
+                        Mã sản phẩm
+                    </th>
+                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
+                        Tên sản phẩm
+                    </th>
+                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
+                        Giá sản phẩm
+                    </th>
+                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
+                        Ngày nhập
+                    </th>
+                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
+                        Thao tác
+                    </th>
+
+                </tr>
+            </thead>
+
+            <tbody class="divide-y divide-gray-200">
+                <tr *ngFor="let product of products | searchBox:SearchText;index as i">
+                    <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                        {{i+1}}
+                    </td>
+                    <td class="whitespace-nowrap px-4 py-2 text-gray-700"><img [src]="product.imageUrl" alt=""
+                            width="150" height="200"></td>
+                    <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{product.code}}</td>
+                    <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{product.name}}</td>
+                    <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{product.price |
+                        currency:"VND":true:"1.2-2"}}</td>
+                    <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{product.releaseDate | date:"dd-MM-yyyy"}}
+                    </td>
+                    <td class="whitespace-nowrap px-4 py-2 ">
+                        <a routerLink="products/update/{{product.id}}">
+                            <button
+                                class="inline-block mr-[5px] rounded bg-blue-400 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">Update</button>
+                        </a>
+
+                        <button
+                            class="inline-block rounded bg-red-500 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+                            (click)="RemoveProduct(product.id)">Xóa</button>
+
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
