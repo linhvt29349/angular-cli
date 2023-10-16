@@ -1,3 +1,4 @@
+<router-outlet />
 <div class="px-4">
     <div class="flex my-[35px]">
         <h2 class="text-[30px] text-red-300 font-medium">Danh sách tài khoản!</h2>
@@ -5,7 +6,7 @@
     </div>
 
     <div class="overflow-x-auto">
-        <router-outlet />
+
         <a routerLink="add"><button
                 class="inline-block rounded bg-blue-400 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">Add
                 account</button></a>
@@ -22,6 +23,9 @@
                     <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
                         Email
                     </th>
+                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
+                        Vai trò
+                    </th>
 
                     <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
                         Thao tác
@@ -37,13 +41,14 @@
                     </td>
                     <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{user.name}}</td>
                     <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{user.email}}</td>
+                    <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{user.role}}</td>
 
                     <td class="whitespace-nowrap px-4 py-2 ">
-                        <a routerLink="update/{{user.id}}"><button
+                        <a routerLink="update/{{user._id}}"><button
                                 class="inline-block mr-[5px] rounded bg-blue-400 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">Update</button></a>
                         <button
                             class="inline-block rounded bg-red-500 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
-                            (click)="RemoveUser(user.id)">Xóa</button>
+                            (click)="RemoveUser(user._id)">Xóa</button>
 
                     </td>
                 </tr>

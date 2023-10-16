@@ -11,15 +11,17 @@ export class ListProductsComponent {
   products: IProducts[] = [];
   productPrices: IProducts[] = [];
   constructor(
-    private productService: ProductsService, private productPrice: ProductsService) {
-    this.productService.getProductNew().subscribe({
-      next: (data) => {
-        this.products = data
+    private productService: ProductsService, private productPricesService: ProductsService) {
+    this.productService.getProducts().subscribe({
+      next: (data: any) => {
+        this.products = data.data
       }
     }),
-      this.productPrice.getProductPrice().subscribe({
-        next: (data) => { this.productPrices = data }
-      })
+      this.productPricesService.getAllPrice().subscribe({
+        next: (data: any) => {
+          this.productPrices = data.data
+        }
+      });
   }
 
 }

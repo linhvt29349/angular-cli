@@ -1,3 +1,13 @@
+<router-outlet />
+<a routerLink="" routerLinkActive="">
+    <button
+        class="inline-flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 bg-white px-5 py-3 text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring"
+        type="button">
+        <span class="text-sm font-medium" (click)="logout()"> Logout </span>
+
+
+    </button>
+</a>
 <div class="px-4">
     <div class="flex my-[35px]">
         <h2 class="text-[30px] text-red-300 font-medium">Danh sách sản phẩm!</h2>
@@ -13,7 +23,7 @@
 
     <div class="overflow-x-auto">
 
-        <a routerLink="products/add">
+        <a routerLink="add">
             <button
                 class="inline-block rounded bg-blue-400 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">Add
                 product</button>
@@ -24,12 +34,7 @@
                     <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
                         Stt
                     </th>
-                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 w-[200px] uppercase">
-                        Ảnh
-                    </th>
-                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
-                        Mã sản phẩm
-                    </th>
+
                     <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 uppercase">
                         Tên sản phẩm
                     </th>
@@ -47,27 +52,26 @@
             </thead>
 
             <tbody class="divide-y divide-gray-200">
-                <tr *ngFor="let product of products | searchBox:SearchText;index as i">
+                <tr *ngFor="let product of products;index as i">
                     <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                         {{i+1}}
                     </td>
-                    <td class="whitespace-nowrap px-4 py-2 text-gray-700"><img [src]="product.imageUrl" alt=""
-                            width="150" height="200"></td>
-                    <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{product.code}}</td>
+
                     <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{product.name}}</td>
                     <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{product.price |
                         currency:"VND":true:"1.2-2"}}</td>
-                    <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{product.releaseDate | date:"dd-MM-yyyy"}}
+                    <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{product.createdAt | date:"dd-MM-yyyy"}}
                     </td>
                     <td class="whitespace-nowrap px-4 py-2 ">
-                        <a routerLink="products/update/{{product.id}}">
+                        <a routerLink="update/{{product._id}}">
                             <button
                                 class="inline-block mr-[5px] rounded bg-blue-400 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">Update</button>
                         </a>
 
                         <button
                             class="inline-block rounded bg-red-500 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
-                            (click)="RemoveProduct(product.id)">Xóa</button>
+                            (click)="RemoveProduct(product._id!)">Xóa</button>
+
 
                     </td>
                 </tr>

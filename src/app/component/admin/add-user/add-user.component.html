@@ -5,15 +5,25 @@
 
         </div>
 
-        <form action="" class="mx-auto mb-0 mt-8 max-w-md space-y-4">
+        <form [formGroup]="formUser" (ngSubmit)="onhandlerSubmit()" class="mx-auto mb-0 mt-8 max-w-md space-y-4">
             <div>
                 <label class="">Name</label>
 
                 <div class="relative">
                     <input type="text" class="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm border-2"
-                        placeholder="Enter name" />
-
-
+                        placeholder="Enter name" formControlName="name" />
+                </div>
+                <div *ngIf="
+                    formUser.get('name')?.hasError('required') &&
+                    (formUser.get('name')?.touched || formUser.get('name')?.dirty)
+                    " class="text-red-500">
+                    Name is required
+                </div>
+                <div *ngIf="
+                    formUser.get('name')?.hasError('minLength') &&
+                    (formUser.get('name')?.touched || formUser.get('name')?.dirty)
+                    " class="text-red-500">
+                    Name has at least 6 characters!
                 </div>
             </div>
 
@@ -22,7 +32,19 @@
 
                 <div class="relative">
                     <input type="email" class="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm border-2"
-                        placeholder="Enter email" />
+                        placeholder="Enter email" formControlName="email" />
+                </div>
+                <div *ngIf="
+                    formUser.get('email')?.hasError('required') &&
+                    (formUser.get('email')?.touched || formUser.get('email')?.dirty)
+                    " class="text-red-500">
+                    Email is required!
+                </div>
+                <div *ngIf="
+                    formUser.get('email')?.hasError('email') &&
+                    (formUser.get('email')?.touched || formUser.get('email')?.dirty)
+                    " class="text-red-500">
+                    Invalid email!
                 </div>
             </div>
             <div>
@@ -31,7 +53,19 @@
                 <div class="relative">
                     <input type="password"
                         class="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm border-2"
-                        placeholder="Enter password" />
+                        placeholder="Enter password" formControlName="password" />
+                </div>
+                <div *ngIf="
+                    formUser.get('password')?.hasError('required') &&
+                    (formUser.get('password')?.touched || formUser.get('password')?.dirty)
+                    " class="text-red-500">
+                    Password is required!
+                </div>
+                <div *ngIf="
+                    formUser.get('password')?.hasError('minlength') &&
+                    (formUser.get('password')?.touched || formUser.get('password')?.dirty)
+                    " class="text-red-500">
+                    Passwords must be at least 6 characters!
                 </div>
             </div>
             <div>
@@ -40,20 +74,29 @@
                 <div class="relative">
                     <input type="password"
                         class="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm border-2"
-                        placeholder="Enter password confirm" />
+                        placeholder="Enter password confirm" formControlName="confirmPassword" />
+                </div>
+                <div *ngIf="
+                        formUser.hasError('passwordNotMatch') &&
+                        (formUser.get('confirmPassword')?.touched ||
+                        formUser.get('confirmPassword')?.dirty)
+                    " class="text-red-500">
+                    Password does not match!
                 </div>
             </div>
             <div>
-                <label class="">Role</label>
+                <label for="role" class="mr-[25px]">Role</label>
 
-                <div class="relative">
-                    <input type="number" class="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm border-2"
-                        placeholder="Enter role" />
-                </div>
+                <select name="" id="" class="border-2 border-gray-300 px-[15px] py-[5px] rounded"
+                    formControlName="role">
+                    <option value="admin" [selected]="true">Admin</option>
+                    <option value="member">Member</option>
+
+                </select>
+
             </div>
 
             <div class="flex items-center justify-between">
-
 
                 <button type="submit"
                     class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white">

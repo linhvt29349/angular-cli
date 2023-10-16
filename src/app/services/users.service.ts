@@ -7,7 +7,7 @@ import { IUsers } from '../interfaces/users';
   providedIn: 'root'
 })
 export class UsersService {
-  API_URL = ` http://localhost:3000/user`;
+  API_URL = `http://localhost:8080/api/users`;
   constructor(private http: HttpClient) { }
   getAllUsers(): Observable<IUsers[]> {
     return this.http.get<IUsers[]>(this.API_URL)
@@ -21,10 +21,13 @@ export class UsersService {
   DeleteUser(id: number | string): Observable<IUsers> {
     return this.http.delete<IUsers>(`${this.API_URL}/${id}`)
   }
-  signIn(user: IUsers): Observable<IUsers> {
-    return this.http.post<IUsers>(this.API_URL, user)
+  signIn(user: any): Observable<any> {
+    return this.http.post(`http://localhost:8080/api/signin`, user)
   }
-  signUp(user: IUsers): Observable<IUsers> {
-    return this.http.post<IUsers>(this.API_URL, user)
+  signUp(user: any): Observable<any> {
+    return this.http.post(`http://localhost:8080/api/signup`, user)
+  }
+  isAuthenticated(): any {
+    return JSON.parse(localStorage.getItem('userInfo') || '{}');
   }
 }

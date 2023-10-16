@@ -57,14 +57,6 @@
       "id": "18"
     },
     {
-      "name": "Practical Wooden Salad",
-      "code": "MWK",
-      "releaseDate": "2078-02-18T06:41:25.694Z",
-      "price": "288.00",
-      "imageUrl": "https://loremflickr.com/640/480",
-      "id": "19"
-    },
-    {
       "name": "Refined Metal Shoes",
       "code": "BIF",
       "releaseDate": "2035-08-24T22:14:56.121Z",
@@ -121,14 +113,6 @@
       "id": "26"
     },
     {
-      "name": "Licensed Fresh Pants",
-      "code": "MZN",
-      "releaseDate": "2062-08-31T13:45:52.256Z",
-      "price": "845.00",
-      "imageUrl": "https://loremflickr.com/640/480",
-      "id": "27"
-    },
-    {
       "name": "Practical Bronze Tuna",
       "code": "SBD",
       "releaseDate": "1991-08-24T02:32:31.593Z",
@@ -169,12 +153,12 @@
       "id": "48"
     },
     {
+      "id": "49",
       "name": "Ergonomic Soft Pants",
+      "price": "680.00",
       "code": "XAU",
       "releaseDate": "2040-01-08T18:14:34.633Z",
-      "price": "680.00",
-      "imageUrl": "https://loremflickr.com/640/480",
-      "id": "49"
+      "imageUrl": "https://loremflickr.com/640/480"
     },
     {
       "name": "Generic Metal Towels",
@@ -205,7 +189,7 @@
       "code": "KPW",
       "releaseDate": "2090-04-15T22:34:59.082Z",
       "price": "81.00",
-      "imageUrl": "https://loremflickr.com/640/480",
+      "imageUrl": "https://loremflickr.com/641/480",
       "id": "53"
     },
     {
@@ -233,12 +217,20 @@
       "id": 1695735837169
     },
     {
+      "id": 1695735837170,
       "name": "Tiểu thuyết",
-      "price": 1204,
+      "price": 124,
       "code": "TT",
       "releaseDate": "2023-09-27",
-      "imageUrl": "https://picsum.photos/200/304",
-      "id": 1695735837170
+      "imageUrl": "https://picsum.photos/200/304"
+    },
+    {
+      "id": 1695735837171,
+      "name": "Người dám cho đi",
+      "price": 300,
+      "code": "NDCD",
+      "releaseDate": "2023-10-01",
+      "imageUrl": "https://picsum.photos/200/310"
     }
   ],
   "user": [

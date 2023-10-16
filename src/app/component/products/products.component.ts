@@ -9,11 +9,11 @@ import { ProductsService } from 'src/app/services/products.service';
 
 })
 export class ProductsComponent {
-  products: IProducts[] = [];
+  products!: IProducts[];
   constructor(private productService: ProductsService) {
     this.productService.getAll().subscribe({
-      next: (data) => {
-        this.products = data
+      next: (data: any) => {
+        this.products = data.data
       }
     })
   }

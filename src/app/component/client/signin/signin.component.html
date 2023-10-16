@@ -5,14 +5,22 @@
 
         </div>
 
-        <form action="" class="mx-auto mb-0 mt-8 max-w-md space-y-4">
+        <form class="mx-auto mb-0 mt-8 max-w-md space-y-4" [formGroup]="formUser" (ngSubmit)="onhandlerSubmit()">
 
             <div>
                 <label class="">Email</label>
 
                 <div class="relative">
                     <input type="email" class="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm border-2"
-                        placeholder="Enter email" />
+                        placeholder="Enter email" formControlName="email" />
+                </div>
+                <div class="text-red-500"
+                    *ngIf="formUser.get('email')?.hasError('required') && (formUser.get('email')?.touched || formUser.get('email')?.dirty)">
+                    Email is required!
+                </div>
+                <div *ngIf="formUser.get('password')?.hasError('email') &&
+                (formUser.get('password')?.touched || formUser.get('password')?.dirty)" class="text-red-500">
+                    Invalid email!
                 </div>
             </div>
             <div>
@@ -21,7 +29,19 @@
                 <div class="relative">
                     <input type="password"
                         class="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm border-2"
-                        placeholder="Enter password" />
+                        placeholder="Enter password" formControlName="password" />
+                </div>
+                <div *ngIf="
+                formUser.get('password')?.hasError('required') &&
+                (formUser.get('password')?.touched || formUser.get('password')?.dirty)
+                " class="text-red-500">
+                    Password is required!
+                </div>
+                <div *ngIf="
+                formUser.get('password')?.hasError('minlength') &&
+                (formUser.get('password')?.touched || formUser.get('password')?.dirty)
+                " class="text-red-500">
+                    Passwords must be at least 6 characters!
                 </div>
             </div>
 

@@ -1,0 +1,95 @@
+<section class="relative flex flex-wrap lg:h-screen lg:items-center">
+    <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
+        <div class="mx-auto max-w-lg text-center">
+            <h1 class="text-2xl font-bold sm:text-3xl">{{ mode === "create" ? "Add" : "Update" }} product!</h1>
+
+        </div>
+        <form action="" class="mx-auto mb-0 mt-8 max-w-md space-y-4" (ngSubmit)="onhandlerSubmit()"
+            [formGroup]="formProduct">
+            <div>
+                <label class="">Name</label>
+
+                <div class="relative">
+                    <input type="text" class="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm border-2"
+                        placeholder="Enter name" formControlName="name" />
+                </div>
+                <div *ngIf="
+                    formProduct.get('name')?.hasError('required') &&
+                    (formProduct.get('name')?.touched || formProduct.get('name')?.dirty)
+                    " class="text-red-500">
+                    Name is required!
+                </div>
+            </div>
+            <div>
+                <label class="">Date</label>
+
+                <div class="relative">
+                    <input type="date" class="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm border-2"
+                        placeholder="Enter date" formControlName="createdAt" />
+                </div>
+                <div *ngIf="
+                    formProduct.get('createdAt')?.hasError('required') &&
+                    (formProduct.get('createdAt')?.touched || formProduct.get('createdAt')?.dirty)
+                    " class="text-red-500">
+                    Date is required!
+                </div>
+            </div>
+            <div>
+                <label class="">Price</label>
+
+                <div class="relative">
+                    <input type="number" class="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm border-2"
+                        placeholder="Enter price" formControlName="price" />
+                </div>
+                <div *ngIf="
+                    formProduct.get('price')?.hasError('required') &&
+                    (formProduct.get('price')?.touched || formProduct.get('price')?.dirty)
+                    " class="text-red-500">
+                    Price is required!
+                </div>
+                <div *ngIf="
+                    formProduct.get('price')?.hasError('min') &&
+                    (formProduct.get('price')?.touched || formProduct.get('price')?.dirty)
+                    " class="text-red-500">
+                    Price must be a positive number!
+                </div>
+            </div>
+            <div>
+                <label class="">Description</label>
+
+                <div class="relative">
+                    <input type="text" class="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm border-2"
+                        placeholder="Enter description" formControlName="description" />
+                </div>
+                <div *ngIf="
+                    formProduct.get('description')?.hasError('required') &&
+                    (formProduct.get('description')?.touched || formProduct.get('description')?.dirty)
+                    " class="text-red-500">
+                    Description is required!
+                </div>
+            </div>
+            <div>
+                <label class="">Image</label>
+
+                <div class="relative">
+                    <input type="text" class="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm border-2"
+                        placeholder="Enter url image" formControlName="images" />
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+                <button type="submit"
+                    class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"> {{ mode ===
+                    "create" ? "Add" : "Update" }}
+
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
+        <img alt="Welcome"
+            src="https://images.unsplash.com/photo-1630450202872-e0829c9d6172?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+            class="absolute inset-0 h-full w-full object-cover" />
+    </div>
+</section>

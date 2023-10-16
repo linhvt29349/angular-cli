@@ -1,8 +1,11 @@
 export interface IProducts {
-    id: number;
+    _id: number;
     name: string;
-    code: string;
-    releaseDate: string;
-    price: number | string;
-    imageUrl: string;
+    price: number;
+    images: string,
+    description?: string;
+    createdAt?: Date;
+    updatedAt?: Date;
+    deletedAt?: Date | null;
+    deleted?: boolean;
 }

@@ -8,16 +8,16 @@ import { UsersService } from 'src/app/services/users.service';
 
 })
 export class AccountComponent {
-  users: IUsers[] = [];
+  users!: IUsers[];
   constructor(private userService: UsersService) {
     this.userService.getAllUsers().subscribe({
-      next: (result) => { this.users = result }
+      next: (result: any) => { this.users = result.users }
     })
   }
   RemoveUser(id: any) {
     if (confirm('Are you sure you want to user delete?') === true) {
       this.userService.DeleteUser(id).subscribe(() => {
-        this.users = this.users.filter(user => user.id != id)
+        this.users = this.users.filter(user => user._id != id)
       })
     } else {
       return;

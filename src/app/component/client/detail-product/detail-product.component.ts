@@ -11,18 +11,18 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class DetailProductComponent {
   product!: IProducts;
-
+  productPrices!: IProducts[];
   constructor(
     private route: ActivatedRoute,
     private productService: ProductsService
+
   ) {
     this.route.params.subscribe(({ id }) => {
       this.productService.getOne(id).subscribe({
-        next: (data) => this.product = data,
+        next: (data: any) => this.product = data.data,
         error: (err) => console.log(err.message)
       })
     }
     )
-
   }
 }
